@@ -1,5 +1,5 @@
-import { NavLink } from "react-router";
-import logo from "../assets/logo.png"
+import { Link, NavLink } from "react-router";
+import logo from "../assets/logo.png";
 const Navbar = () => {
   return (
     <div className="shadow-sm">
@@ -52,8 +52,13 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <img className="size-10 border rounded-full border-gray-500 p-0.5" src={logo} alt="" />
+          <div className="flex items-center justify-center gap-2">
+            <img
+              className="size-10 border rounded-full border-gray-500 p-0.5"
+              src={logo}
+              alt=""
+            />
+            <p className="text-xl font-bold">CBC Training</p>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -85,7 +90,20 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <div className="flex justify-center space-x-3 p-2">
+            <Link
+              to="/register"
+              className="text-white font-semibold px-3 py-1 bg-purple-400 rounded-lg transition duration-300"
+            >
+              Register
+            </Link>
+            <Link
+              to="/login"
+              className="text-white font-semibold px-3 py-1 bg-purple-400  rounded-lg transition duration-300"
+            >
+              Login
+            </Link>
+          </div>
         </div>
       </div>
     </div>
