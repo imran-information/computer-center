@@ -3,7 +3,7 @@ import React from 'react';
 const Admit = () => {
     return (
         <div>
-            Admit
+            Admit Page
         </div>
     );
 };
